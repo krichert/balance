@@ -1,0 +1,209 @@
+/************ GENERAL ************/
+
+$active-color: #75A333;
+$base-color: #ffffff;
+$accent-color: #2A2A2A;
+$handwriting-font: 'Charm', cursive;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: $accent-color;
+}
+
+/************ NAV ************/
+
+nav {
+	background-color: $base-color;
+	box-shadow: 0 7px 14px rgba(0, 0, 0, 0.20), 0 5px 5px rgba(0, 0, 0, 0.20);
+
+	&.navbar-custom {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.navbar-nav .nav-item .nav-link {
+		color: $active-color;
+		border-radius: 3px;
+		transition: font-weight 1s, background-color 1s, color 1s;
+		font-size: 1.2rem;
+
+		&:hover, &:active, &:focus {
+			background-color: $active-color;
+			color: $base-color;
+			font-weight: bold;
+		}
+	}
+
+	.navbar-brand img {
+		width: 45px;
+		height: 45px;
+	}
+
+	button.navbar-toggler.custom-toggler {
+		color: $active-color;
+		border-color: $active-color;
+		transition: color 1s, background-color 1s, transform 1s;
+		padding: 4px 6.5px;
+
+		&:hover {
+			color: $base-color;
+			background-color: $active-color;
+			transform: rotate(360deg);
+
+			.navbar-toggler-icon {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+			}
+		}
+
+		.navbar-toggler-icon {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(117,163,51)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+		}
+	}
+}
+
+/************ TITLE ************/
+
+.title {
+	background-image: url("../img/hero.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	.hero {
+		background-color: rgba(255, 255, 255, 0.7);
+		max-width: 50%;
+		text-align: center;
+		border-radius: 10px;
+
+		img {
+			max-width: 300px;
+		}
+	}
+}
+
+/************ BASE ************/
+
+.bg {
+	padding: 60px 0;
+}
+
+.bg-active {
+	background-color: $active-color;
+}
+
+.bg-base {
+	background-color: $base-color;
+}
+
+section h2 {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+/************ ABOUT_US ************/
+
+#about-us {
+	font-size: 20px;
+	text-align: center;
+
+	div.container {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	div.container div {
+		padding: 15px;
+	}
+
+	div.container div:first-child {
+		flex: 2;
+	}
+
+	div.container div:last-child {
+		flex: 1;
+	}
+
+	img {
+		border-radius: 50%;
+		max-width: 300px;
+		box-shadow: 0 0 15px $accent-color;
+	}
+}
+
+/************ NEWS ************/
+
+#news {
+	img {
+		max-width: 300px;
+		margin-top: 15px;
+	}
+}
+
+/************ NEWS ************/
+
+#services {
+	.service-card {
+		position: relative;
+		margin-bottom: 60px;
+	}
+
+	.service-text, .service-title {
+		margin-left: 30px;
+		background-color: $active-color;
+		color: $base-color;
+		border-radius: 2px $active-color;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 15px;
+	}
+
+	.service-text {
+		text-align: justify;
+		padding-top: 15px;
+	}
+
+	.service-title {
+		font-weight: bold;
+		font-size: 20px;
+		text-align: center;
+		padding-top: 30px;
+	}
+
+	.service-icon {
+		font-size: 35px;
+		padding: 20px 25px;
+		position: absolute;
+		top: -30px;
+		left: 20px;
+		color: $accent-color;
+		border: 5px solid $accent-color;
+		border-radius: 5px;
+		background-color: $base-color;
+	}
+
+	.active {
+		.service-text, .service-title {
+			background-color: $accent-color;
+			color: $base-color;
+			border-radius: 2px $accent-color;
+		}
+
+		.service-icon {
+			border: 5px solid $active-color;
+			color: $active-color;
+		}
+	}
+
+}
