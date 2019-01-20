@@ -151,7 +151,7 @@ section h2 {
 	}
 }
 
-/************ NEWS ************/
+/************ SERVICES ************/
 
 #services {
 	.service-card {
@@ -163,7 +163,6 @@ section h2 {
 		margin-left: 30px;
 		background-color: $active-color;
 		color: $base-color;
-		border-radius: 2px $active-color;
 		padding-left: 15px;
 		padding-right: 15px;
 		padding-bottom: 15px;
@@ -177,8 +176,9 @@ section h2 {
 	.service-title {
 		font-weight: bold;
 		font-size: 20px;
-		text-align: center;
+		text-align: right;
 		padding-top: 30px;
+		padding-right: 30px;
 	}
 
 	.service-icon {
@@ -191,6 +191,9 @@ section h2 {
 		border: 5px solid $accent-color;
 		border-radius: 5px;
 		background-color: $base-color;
+		min-width: 105px;
+		min-height: 105px;
+		text-align: center;
 	}
 
 	.active {
@@ -203,6 +206,102 @@ section h2 {
 		.service-icon {
 			border: 5px solid $active-color;
 			color: $active-color;
+		}
+	}
+}
+
+/************ SERVICES ************/
+
+#offer {
+	.offer-card {
+		border-radius: 2px;
+		position: relative;
+		margin-bottom: 30px;
+
+		div {
+			align-items: center;
+			text-align: center;
+			background-color: $base-color;
+
+			div {
+				padding-top: 25px;
+				padding-bottom: 25px;
+
+			}
+		}
+
+		.offer-price {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.offer-circle {
+			position: absolute;
+			border: 3px solid $active-color;
+			border-radius: 50%;
+			width: 70px;
+			height: 70px;
+			box-shadow: 0 0 10px $accent-color;
+			right: 38px;
+			background-color: transparent;
+		}
+
+		.offer-icon {
+			font-size: 30px;
+			text-align: center;
+			border-right: 2px solid $accent-color;
+		}
+	}
+}
+
+/************ GALLERY ************/
+
+#gallery {
+	div {
+		justify-content: center;
+		text-align: center;
+		margin-top: 15px;
+	}
+
+	img {
+		transition: opacity 1s, transform 1s;
+		box-shadow: 0 0 10px $accent-color;
+	}
+}
+
+/************ CONTACT ************/
+
+#contact {
+	#map {
+		height: 100%;
+		width: 100%;
+		min-height: 125px;
+		max-height: 125px;
+		max-width: 300px;
+		margin: auto;
+		box-shadow: 0 0 14px $accent-color, 0 0 5px $accent-color;
+	}
+
+	table {
+		tr {
+			border-bottom: 1px solid $accent-color;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		td {
+			padding: 8px;
+			color: $base-color;
+
+			a {
+				color: $base-color;
+				text-decoration: none;
+			}
+		}
+		.icon-cell {
+			width: 30px;
 		}
 	}
 

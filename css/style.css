@@ -98,7 +98,7 @@ section h2 {
   max-width: 300px;
   margin-top: 15px; }
 
-/************ NEWS ************/
+/************ SERVICES ************/
 #services .service-card {
   position: relative;
   margin-bottom: 60px; }
@@ -106,7 +106,6 @@ section h2 {
   margin-left: 30px;
   background-color: #75A333;
   color: #ffffff;
-  border-radius: 2px #75A333;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 15px; }
@@ -116,8 +115,9 @@ section h2 {
 #services .service-title {
   font-weight: bold;
   font-size: 20px;
-  text-align: center;
-  padding-top: 30px; }
+  text-align: right;
+  padding-top: 30px;
+  padding-right: 30px; }
 #services .service-icon {
   font-size: 35px;
   padding: 20px 25px;
@@ -127,7 +127,10 @@ section h2 {
   color: #2A2A2A;
   border: 5px solid #2A2A2A;
   border-radius: 5px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  min-width: 105px;
+  min-height: 105px;
+  text-align: center; }
 #services .active .service-text, #services .active .service-title {
   background-color: #2A2A2A;
   color: #ffffff;
@@ -135,5 +138,65 @@ section h2 {
 #services .active .service-icon {
   border: 5px solid #75A333;
   color: #75A333; }
+
+/************ SERVICES ************/
+#offer .offer-card {
+  border-radius: 2px;
+  position: relative;
+  margin-bottom: 30px; }
+  #offer .offer-card div {
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff; }
+    #offer .offer-card div div {
+      padding-top: 25px;
+      padding-bottom: 25px; }
+  #offer .offer-card .offer-price {
+    font-size: 18px;
+    font-weight: bold; }
+  #offer .offer-card .offer-circle {
+    position: absolute;
+    border: 3px solid #75A333;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 10px #2A2A2A;
+    right: 38px;
+    background-color: transparent; }
+  #offer .offer-card .offer-icon {
+    font-size: 30px;
+    text-align: center;
+    border-right: 2px solid #2A2A2A; }
+
+/************ GALLERY ************/
+#gallery div {
+  justify-content: center;
+  text-align: center;
+  margin-top: 15px; }
+#gallery img {
+  transition: opacity 1s, transform 1s;
+  box-shadow: 0 0 10px #2A2A2A; }
+
+/************ CONTACT ************/
+#contact #map {
+  height: 100%;
+  width: 100%;
+  min-height: 125px;
+  max-height: 125px;
+  max-width: 300px;
+  margin: auto;
+  box-shadow: 0 0 14px #2A2A2A, 0 0 5px #2A2A2A; }
+#contact table tr {
+  border-bottom: 1px solid #2A2A2A; }
+  #contact table tr:last-child {
+    border-bottom: none; }
+#contact table td {
+  padding: 8px;
+  color: #ffffff; }
+  #contact table td a {
+    color: #ffffff;
+    text-decoration: none; }
+#contact table .icon-cell {
+  width: 30px; }
 
 /*# sourceMappingURL=style.css.map */
