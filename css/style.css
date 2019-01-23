@@ -75,7 +75,8 @@ section h2, section h1 {
   margin-bottom: 3rem;
   text-transform: uppercase;
   font-size: 30px;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 40px; }
 
 /************ HOME ************/
 #home {
@@ -143,13 +144,6 @@ section h2, section h1 {
   min-width: 105px;
   min-height: 105px;
   text-align: center; }
-#services .active .service-text, #services .active .service-title {
-  background-color: #2A2A2A;
-  color: #ffffff;
-  border-radius: 2px #2A2A2A; }
-#services .active .service-icon {
-  border: 5px solid #8ab933;
-  color: #8ab933; }
 
 /************ SERVICES ************/
 #offer .offer-header {
@@ -267,6 +261,10 @@ section h2, section h1 {
   #offer .offer-card .offer-icon {
     font-size: 20px; }
   #offer .offer-card .offer-text {
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  section h1, section h2 {
+    font-size: 25px;
+    line-height: 35px; } }
 
 /*# sourceMappingURL=style.css.map */

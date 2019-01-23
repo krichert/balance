@@ -114,6 +114,7 @@ section h2, section h1 {
 	text-transform: uppercase;
 	font-size: 30px;
 	font-weight: 700;
+	line-height: 40px;
 }
 
 /************ HOME ************/
@@ -213,19 +214,6 @@ section h2, section h1 {
 		min-width: 105px;
 		min-height: 105px;
 		text-align: center;
-	}
-
-	.active {
-		.service-text, .service-title {
-			background-color: $accent-color;
-			color: $base-color;
-			border-radius: 2px $accent-color;
-		}
-
-		.service-icon {
-			border: 5px solid $active-color;
-			color: $active-color;
-		}
 	}
 }
 
@@ -430,5 +418,10 @@ section h2, section h1 {
 				font-size: 14px;
 			}
 		}
+	}
+
+	section h1, section h2 {
+		font-size: 25px;
+		line-height: 35px;
 	}
 }
