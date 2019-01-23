@@ -1,6 +1,8 @@
 /************ GENERAL ************/
 
-$active-color: #75A333;
+//$active-color: #75A333;
+//$active-color: #6EAB2B;
+$active-color: #8ab933;
 $base-color: #ffffff;
 $accent-color: #2A2A2A;
 $handwriting-font: 'Charm', cursive;
@@ -12,6 +14,7 @@ $handwriting-font: 'Charm', cursive;
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	color: $accent-color;
 }
 
@@ -105,46 +108,57 @@ nav {
 	background-color: $base-color;
 }
 
-section h2 {
+section h2, section h1 {
 	text-align: center;
-	margin-bottom: 60px;
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+/************ HOME ************/
+
+#home {
+	text-align: justify;
+
+	p {
+		color: $base-color;
+	}
+
+	.inverse-color {
+		color: $accent-color;
+		text-align: center;
+		margin-top: 30px;
+	}
 }
 
 /************ ABOUT_US ************/
 
 #about-us {
-	font-size: 20px;
-	text-align: center;
+	text-align: justify;
 
-	div.container {
-		display: flex;
-		align-items: center;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	div.container div {
-		padding: 15px;
-	}
-
-	div.container div:first-child {
-		flex: 2;
-	}
-
-	div.container div:last-child {
-		flex: 1;
+	h2 {
+		margin-bottom: 2rem;
 	}
 
 	img {
 		border-radius: 50%;
-		max-width: 300px;
+		max-width: 350px;
 		box-shadow: 0 0 15px $accent-color;
+	}
+
+	div {
+		align-items: center;
 	}
 }
 
 /************ NEWS ************/
 
 #news {
+	.card-news div {
+		box-shadow: 0 2px 5px $accent-color;
+	}
+
 	img {
 		max-width: 300px;
 		margin-top: 15px;
@@ -166,11 +180,17 @@ section h2 {
 		padding-left: 15px;
 		padding-right: 15px;
 		padding-bottom: 15px;
+		box-shadow: 0 2px 2px $accent-color;
+
 	}
 
 	.service-text {
 		text-align: justify;
 		padding-top: 15px;
+		min-height: 200px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
 
 	.service-title {
@@ -178,7 +198,6 @@ section h2 {
 		font-size: 20px;
 		text-align: right;
 		padding-top: 30px;
-		padding-right: 30px;
 	}
 
 	.service-icon {
@@ -213,20 +232,54 @@ section h2 {
 /************ SERVICES ************/
 
 #offer {
+	.offer-header {
+		margin-bottom: 10px;
+		min-height: 70px;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: $base-color;
+			font-size: 25px;
+			box-shadow: 0 2px 2px $accent-color;
+
+			&:nth-child(1) {
+				border-right: 1px solid grey;
+			}
+
+			&:nth-child(2) {
+				border-left: 1px solid grey;
+			}
+
+			small {
+				padding-top: 5px;
+				font-size: 14px;
+			}
+		}
+	}
+
 	.offer-card {
 		border-radius: 2px;
 		position: relative;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
+		min-height: 70px;
+		box-shadow: 0 2px 2px $accent-color;
 
 		div {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
 			align-items: center;
-			text-align: center;
 			background-color: $base-color;
 
-			div {
-				padding-top: 25px;
-				padding-bottom: 25px;
+			&:nth-child(3) {
+				border-right: 1px solid grey;
+			}
 
+			&:nth-child(4) {
+				border-left: 1px solid grey;
 			}
 		}
 
@@ -235,21 +288,14 @@ section h2 {
 			font-weight: bold;
 		}
 
-		.offer-circle {
-			position: absolute;
-			border: 3px solid $active-color;
-			border-radius: 50%;
-			width: 70px;
-			height: 70px;
-			box-shadow: 0 0 10px $accent-color;
-			right: 38px;
-			background-color: transparent;
-		}
-
 		.offer-icon {
 			font-size: 30px;
 			text-align: center;
 			border-right: 2px solid $accent-color;
+		}
+
+		.offer-text {
+			font-size: 18px;
 		}
 	}
 }
@@ -266,6 +312,7 @@ section h2 {
 	img {
 		transition: opacity 1s, transform 1s;
 		box-shadow: 0 0 10px $accent-color;
+		max-height: 500px;
 	}
 }
 
@@ -276,10 +323,14 @@ section h2 {
 		height: 100%;
 		width: 100%;
 		min-height: 125px;
-		max-height: 125px;
+		max-height: 250px;
 		max-width: 300px;
 		margin: auto;
 		box-shadow: 0 0 14px $accent-color, 0 0 5px $accent-color;
+	}
+
+	h2 {
+		margin-bottom: 1.5rem;
 	}
 
 	table {
@@ -304,5 +355,80 @@ section h2 {
 			width: 30px;
 		}
 	}
+}
 
+/************ MEDIA QUERIES ************/
+
+@media screen and (max-width: 992px) {
+	body {
+		font-size: 14px;
+	}
+
+	#contact {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.title {
+		.hero {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	#about-us {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	#news {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	#services {
+		.service-title {
+			font-size: 16px;
+			padding-left: 50px;
+		}
+
+		.service-icon {
+			font-size: 31px;
+			padding: 10px 12.5px;
+			top: -30px;
+			left: 20px;
+			min-width: 80px;
+			min-height: 80px;
+		}
+	}
+
+	#offer {
+		.offer-header {
+			div {
+				font-size: 15px;
+
+				small {
+					font-size: 10px;
+				}
+			}
+		}
+
+		.offer-card {
+			.offer-price {
+				font-size: 14px;
+			}
+
+			.offer-icon {
+				font-size: 20px;
+			}
+
+			.offer-text {
+				font-size: 14px;
+			}
+		}
+	}
 }

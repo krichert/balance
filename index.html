@@ -32,7 +32,10 @@
         <div class="collapse navbar-collapse" id="navbar-content">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item text-center mx-1">
-                    <a class="nav-link" href="#about-us">O nas</a>
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item text-center mx-1">
+                    <a class="nav-link" href="#about-us">O mnie</a>
                 </li>
                 <li class="nav-item text-center mx-1">
                     <a class="nav-link" href="#news">Aktualności</a>
@@ -61,19 +64,48 @@
 
 <main>
 
-    <section id="about-us" class="bg bg-base">
+    <section id="home" class="bg bg-active">
+
+        <h1>Balance</h1>
         <div class="container">
-            <div>
-                <p>Cześć! Jestem Andrzej Balunowski - trener personalny i dietetyk!</p>
-                <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po
-                    raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć
-                    wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym.
-                    Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty
-                    Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do
-                    realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+            <div class="row">
+                <div class="offset-md-2 col-md-8">
+                    <p>Studio Dietetyczno-Treningowe BALANCE to jedyne w Suwałkach połączenie gabinetu dietetycznego
+                        i sali treningowej. Tutaj osiągniesz swój cel w kameralnych warunkach, indywidualnie pod okiem
+                        wykwalifikowanego dietetyka i trenera personalnego.
+                        Studio BALANCE to blisko 65m<sup>2</sup> dostosowanych do przeprowadzenia treningu dostosowanego
+                        do Twoich potrzeb
+                        i możliwości oraz uzyskania indywidualnych konsultacji żywieniowych.
+                        Do dyspozycji klientów dostępna jest szatnia i łazienka.</p>
+                    <p class="inverse-color"><strong>ZRÓB PIERWSZY KROK I SKONTAKTUJ SIĘ JUŻ DZIŚ! <br/> PIERWSZY
+                        TRENING
+                        GRATIS!</strong></p>
+                </div>
             </div>
-            <div>
-                <img src="img/logo_img.png">
+        </div>
+    </section>
+
+    <section id="about-us" class="bg bg-base">
+        <h2>O mnie</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mt-3">
+                    <p>Studio Dietetyczno-Treningowe BALANCE tworzy:</p>
+                    <p>mgr Andrzej Balunowski – dietetyk sportowy i kliniczny, trener personalny
+                        Jestem absolwentem kierunku Dietetyka na Uniwersytecie Warmińsko-Mazurskim w Olsztynie
+                        oraz kierunku Żywienie Człowieka i Ocena Żywności w Szkole Głównej Gospodarstwa Wiejskiego
+                        w Warszawie. Dodatkowo uczestniczyłem w wielu kursach i szkoleniach, takich jak kurs trenera
+                        personalnego czy dietetyki sportowej. Ponadto ukończyłem Podyplomowe Studia Przygotowania
+                        Pedagogicznego w Szkole Głównej Gospodarstwa Wiejskiego w Warszawie.</p>
+                    <p>Umiejętności praktyczne zdobywałem między innymi w Poradni Gastroenterologicznej
+                        i Endokrynologicznej w Wojewódzkim Specjalistycznym Szpitalu w Olsztynie oraz Poradni
+                        Diabetologicznej w Szpitalu Wojewódzkim w Suwałkach. Miałem również okazję prowadzić edukację
+                        żywieniową wśród dzieci ze szkół podstawowych w ramach kampanii „Wiem Co Jem” prowadzonej przez
+                        urząd miasta Warszawa.</p>
+                </div>
+                <div class="col-lg-5 text-center mt-3">
+                    <img src="pictures/about.jpg">
+                </div>
             </div>
         </div>
     </section>
@@ -82,26 +114,14 @@
         <div class="container">
             <h2>Aktualności</h2>
             <div class="row">
-                <div class="col-md-6">
+                <div class="offset-md-3 col-md-6 card-news">
                     <div class="bg-white text-center">
-                        <img src="img/hero.jpg" alt="blog post image">
+                        <img class="img-fluid" src="pictures/news.jpg" alt="promocja">
                     </div>
                     <div class="bg-white card-body text-center">
-                        <h3>Założenie strony</h3>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <small>2019-01-13</small>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="bg-white text-center">
-                        <img src="img/hero.jpg" alt="blog post image">
-                    </div>
-                    <div class="bg-white card-body text-center">
-                        <h3>Założenie strony</h3>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <small>2019-01-13</small>
+                        <h3>Zdrowe wejście w Nowy Rok.</h3>
+                        <p class="card-text">Do końca stycznia promocja na wszystkie usługi -15%!</p>
+                        <small>2019-01-01</small>
                     </div>
                 </div>
             </div>
@@ -110,40 +130,44 @@
 
     <section id="services" class="bg bg-base">
         <div class="container">
-            <h2>Co oferujemy?</h2>
+            <h2>Oferta</h2>
             <div class="row">
-                <div class="service-card col-md-6 active">
-                    <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
-                    <div class="service-title">Plan treningowy</div>
-                    <div class="service-text">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
-                        przemyśle poligraficznym. Został po
-                        raz pierwszy użyty w XV w
+                <div class="service-card col-lg-6 active">
+                    <div class="service-icon"><i class="fas fa-male"></i></div>
+                    <div class="service-title">Analiza składu ciała</div>
+                    <div class="service-text">Chcesz poznać skład swojego ciała? Dzięki specjalistycznemu analizatorowi
+                        składu ciała marki InBody dowiesz się ile w Twoim organizmie znajduje się wody, tkanki
+                        tłuszczowej czy też uzyskasz wiedzę na temat masy Twoich mięśni szkieletowych.
                     </div>
                 </div>
-                <div class="service-card col-md-6">
-                    <div class="service-icon"><i class="fas fa-user"></i></div>
-                    <div class="service-title">Zajęcia indywidualne</div>
-                    <div class="service-text">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
-                        przemyśle poligraficznym. Został po
-                        raz pierwszy użyty w XV w
+                <div class="service-card col-lg-6">
+                    <div class="service-icon"><i class="fas fa-heart"></i></div>
+                    <div class="service-title">Konsultacja żywieniowo-zdrowotna</div>
+                    <div class="service-text">Podczas konsultacji analizuję Twój dotychczasowy sposób odżywiania,
+                        rozmawiamy
+                        o ewentualnych błędach i problemach zdrowotnych. Rozpoczynam edukację żywieniową i ustalamy
+                        zakres oraz przebieg współpracy. Wykonana zostanie również analiza składu ciała wraz z
+                        omówieniem wyników.
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="service-card col-md-6">
+                <div class="service-card col-lg-6">
                     <div class="service-icon"><i class="fas fa-carrot"></i></div>
-                    <div class="service-title">Dieta</div>
-                    <div class="service-text">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
-                        przemyśle poligraficznym. Został po
-                        raz pierwszy użyty w XV w
+                    <div class="service-title">Spersonalizowany jadłospis</div>
+                    <div class="service-text">Dzięki informacjom uzyskanym w czasie konsultacji żywieniowo-zdrowotnej
+                        opracowuję jadłospis
+                        w wariancie 7- lub 14-dniowym. Zawsze jest tworzony indywidualnie, dostosowany do Twoich
+                        potrzeb, stanu zdrowia, trybu życia i preferencji.
                     </div>
                 </div>
-                <div class="service-card col-md-6">
-                    <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
-                    <div class="service-title">Plan treningowy</div>
-                    <div class="service-text">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
-                        przemyśle poligraficznym. Został po
-                        raz pierwszy użyty w XV w
+                <div class="service-card col-lg-6">
+                    <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+                    <div class="service-title">Trening personalny</div>
+                    <div class="service-text">Oferuję treningi indywidualne lub dla dwóch osób. Trening jest w pełni
+                        dostosowany do Twoich możliwości oraz potrzeb. Skupimy się na ćwiczeniach wielostawowych,
+                        angażujących wiele grup mięśniowych Twego ciała, poprawimy Twoją wytrzymałość, koordynację oraz
+                        Twoje samopoczucie.
                     </div>
                 </div>
             </div>
@@ -153,39 +177,51 @@
     <section id="offer" class="bg bg-active">
         <div class="container">
             <h2>Cennik</h2>
-            <div class="row">
-                <div class="offer-card col-md-6">
-                    <div class="row no-gutters">
-                        <div class="offer-icon col-3"><i class="fas fa-carrot"></i></div>
-                        <div class="offer-text col-6">Zajecia indywidualne</div>
-                        <div class="offer-price col-3">100 zł</div>
-                        <div class="offer-circle"></div>
-                    </div>
+            <div class="offer-header row no-gutters">
+                <div class="offset-8 col-2">
+                    <span class="fas fa-user"></span>
+                    <small>1 osoba</small>
                 </div>
-                <div class="offer-card col-md-6">
-                    <div class="row no-gutters">
-                        <div class="offer-icon col-3"><i class="fas fa-carrot"></i></div>
-                        <div class="offer-text col-6">Zajecia indywidualne</div>
-                        <div class="offer-price col-3">100 zł</div>
-                        <div class="offer-circle"></div>
-                    </div>
+                <div class="col-2">
+                    <span class="fas fa-users"></span>
+                    <small>2 osoby</small>
                 </div>
-                <div class="offer-card col-md-6">
-                    <div class="row no-gutters">
-                        <div class="offer-icon col-3"><i class="fas fa-carrot"></i></div>
-                        <div class="offer-text col-6">Zajecia indywidualne</div>
-                        <div class="offer-price col-3">100 zł</div>
-                        <div class="offer-circle"></div>
-                    </div>
-                </div>
-                <div class="offer-card col-md-6">
-                    <div class="row no-gutters">
-                        <div class="offer-icon col-3"><i class="fas fa-carrot"></i></div>
-                        <div class="offer-text col-6">Zajecia indywidualne</div>
-                        <div class="offer-price col-3">100 zł</div>
-                        <div class="offer-circle"></div>
-                    </div>
-                </div>
+            </div>
+            <div class="offer-card row no-gutters">
+                <div class="offer-icon col-2"><i class="fas fa-male"></i></div>
+                <div class="offer-text col-6">Analiza składu ciała</div>
+                <div class="offer-price col-2">30 zł</div>
+                <div class="offer-price col-2">45 zł</div>
+            </div>
+            <div class="offer-card row no-gutters">
+                <div class="offer-icon col-2"><i class="fas fa-clipboard-list"></i></div>
+                <div class="offer-text col-6">Pierwsza wizyta</div>
+                <div class="offer-price col-2">80 zł</div>
+                <div class="offer-price col-2">120 zł</div>
+            </div>
+            <div class="offer-card row no-gutters">
+                <div class="offer-icon col-2"><i class="fas fa-clipboard-check"></i></div>
+                <div class="offer-text col-6">Wizyta kontrolna</div>
+                <div class="offer-price col-2">60 zł</div>
+                <div class="offer-price col-2">90 zł</div>
+            </div>
+            <div class="offer-card row no-gutters">
+                <div class="offer-icon col-2"><i class="fas fa-lemon"></i></div>
+                <div class="offer-text col-6">Jadłospis 7-dniowy</div>
+                <div class="offer-price col-2">150 zł</div>
+                <div class="offer-price col-2">225 zł</div>
+            </div>
+            <div class="offer-card row no-gutters">
+                <div class="offer-icon col-2"><i class="fas fa-carrot"></i></div>
+                <div class="offer-text col-6">Jadłospis 14-dniowy</div>
+                <div class="offer-price col-2">200 zł</div>
+                <div class="offer-price col-2">300 zł</div>
+            </div>
+            <div class="offer-card row no-gutters">
+                <div class="offer-icon col-2"><i class="fas fa-dumbbell"></i></div>
+                <div class="offer-text col-6">Trening personalny</div>
+                <div class="offer-price col-2">50 zł</div>
+                <div class="offer-price col-2">75 zł</div>
             </div>
         </div>
     </section>
@@ -194,36 +230,19 @@
         <div class="container">
             <h2>Galeria</h2>
             <div class="row">
-                <div class="col-md-4 col-lg-4">
-                    <img class="img-fluid" src="img/logo.jpg" alt="xxx">
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <img class="img-fluid" src="img/logo.jpg" alt="xxx">
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <img class="img-fluid" src="img/logo.jpg" alt="xxx">
+                <div class="col">
+                    <img class="img-fluid" src="pictures/gym2.jpg" alt="siłownia">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-lg-4">
-                    <img class="img-fluid" src="img/logo.jpg" alt="xxx">
+                <div class="col-md-4">
+                    <img class="img-fluid" src="pictures/gym.jpg" alt="siłownia">
                 </div>
-                <div class="col-md-4 col-lg-4">
-                    <img class="img-fluid" src="img/logo.jpg" alt="xxx">
+                <div class="col-md-4">
+                    <img class="img-fluid" src="pictures/gym3.jpg" alt="siłownia">
                 </div>
-                <div class="col-md-4 col-lg-4">
-                    <img class="img-fluid" src="img/logo.jpg" alt="xxx">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-lg-4">
-                    <img class="img-fluid" src="img/logo.jpg" alt="xxx">
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <img class="img-fluid" src="img/logo.jpg" alt="xxx">
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <img class="img-fluid" src="img/logo.jpg" alt="xxx">
+                <div class="col-md-4">
+                    <img class="img-fluid" src="pictures/office.jpg" alt="biuro">
                 </div>
             </div>
         </div>
@@ -231,24 +250,26 @@
 
     <section id="contact" class="bg bg-active">
         <div class="container">
-            <h2>Skontaktuj się ze mną</h2>
-            <div class="row">
-                <div class="col-md-4">
+            <h2>Kontakt</h2>
+            <div class="row no-gutters">
+                <div class="col-md-4 mt-2">
                     <div class="d-flex h-100 align-items-center justify-content-center flex-column">
                         <table>
                             <tr>
                                 <td class="text-center">Zajęcia prowadzę w:</td>
                             </tr>
                             <tr>
-                                <td class="text-center">ul. XXX 50, <br> Suwałki</td>
+                                <td class="text-center">ul. ks. J. J. Zawadzkiego 2 lok. 1.4.b, <br> (Serce Suwałk, I
+                                    piętro)
+                                </td>
                             </tr>
                         </table>
                     </div>
                 </div>
-                <div class="col-md-4 mt-md-0 mt-3 d-flex justify-content-center align-items-center">
+                <div class="col-md-4 mt-md-1 px-3 mt-lg-2 d-flex justify-content-center align-items-center">
                     <div id="map"></div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mt-2">
                     <div class="d-flex h-100 align-items-center flex-column">
                         <table class="text-center">
                             <tr>
@@ -257,17 +278,21 @@
                             </tr>
                             <tr>
                                 <td class="icon-cell"><span class="fas fa-phone"></span></td>
-                                <td><a href="tel:XXXXXXXX">XXX - XXX - XXX</a></td>
+                                <td><a href="tel:503174009">503-174-009</a></td>
                             </tr>
                             <tr>
                                 <td class="icon-cell"><span class="fas fa-envelope"></span></td>
-                                <td><a href="mailto:xxxx">xxxx@xxxxx.pl</a>
+                                <td><a href="mailto:studiobalancesuwalki@gmail.com">studiobalancesuwalki@gmail.com</a>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="icon-cell"><span class="fas fa-facebook"></span></td>
+                                <td class="icon-cell"><span class="fab fa-instagram"></span></td>
+                                <td>@studiobalancesuwalki</td>
+                            </tr>
+                            <tr>
+                                <td class="icon-cell"><span class="fab fa-facebook-square"></span></td>
                                 <td><a target=_blank
-                                       href="xxx">xxxx</a>
+                                       href="https://www.facebook.com/studiobalancesuwalki/">studiobalancesuwalki</a>
                                 </td>
                             </tr>
                         </table>
@@ -287,10 +312,10 @@
 <script src="js/zoom-img.js"></script>
 <script>
     function initMap() {
-        var swarzewska = {lat: 54.538329, lng: 18.463596};
+        var zawadzkiego = {lat: 54.100353, lng: 22.930520};
         var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 15, center: swarzewska});
-        var marker = new google.maps.Marker({position: swarzewska, map: map});
+            document.getElementById('map'), {zoom: 15, center: zawadzkiego});
+        var marker = new google.maps.Marker({position: zawadzkiego, map: map});
     }
 </script>
 

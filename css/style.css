@@ -5,6 +5,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   color: #2A2A2A; }
 
 /************ NAV ************/
@@ -15,25 +16,25 @@ nav {
     padding-top: 0;
     padding-bottom: 0; }
   nav .navbar-nav .nav-item .nav-link {
-    color: #75A333;
+    color: #8ab933;
     border-radius: 3px;
     transition: font-weight 1s, background-color 1s, color 1s;
     font-size: 1.2rem; }
     nav .navbar-nav .nav-item .nav-link:hover, nav .navbar-nav .nav-item .nav-link:active, nav .navbar-nav .nav-item .nav-link:focus {
-      background-color: #75A333;
+      background-color: #8ab933;
       color: #ffffff;
       font-weight: bold; }
   nav .navbar-brand img {
     width: 45px;
     height: 45px; }
   nav button.navbar-toggler.custom-toggler {
-    color: #75A333;
-    border-color: #75A333;
+    color: #8ab933;
+    border-color: #8ab933;
     transition: color 1s, background-color 1s, transform 1s;
     padding: 4px 6.5px; }
     nav button.navbar-toggler.custom-toggler:hover {
       color: #ffffff;
-      background-color: #75A333;
+      background-color: #8ab933;
       transform: rotate(360deg); }
       nav button.navbar-toggler.custom-toggler:hover .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
@@ -64,36 +65,43 @@ nav {
   padding: 60px 0; }
 
 .bg-active {
-  background-color: #75A333; }
+  background-color: #8ab933; }
 
 .bg-base {
   background-color: #ffffff; }
 
-section h2 {
+section h2, section h1 {
   text-align: center;
-  margin-bottom: 60px; }
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700; }
+
+/************ HOME ************/
+#home {
+  text-align: justify; }
+  #home p {
+    color: #ffffff; }
+  #home .inverse-color {
+    color: #2A2A2A;
+    text-align: center;
+    margin-top: 30px; }
 
 /************ ABOUT_US ************/
 #about-us {
-  font-size: 20px;
-  text-align: center; }
-  #about-us div.container {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between; }
-  #about-us div.container div {
-    padding: 15px; }
-  #about-us div.container div:first-child {
-    flex: 2; }
-  #about-us div.container div:last-child {
-    flex: 1; }
+  text-align: justify; }
+  #about-us h2 {
+    margin-bottom: 2rem; }
   #about-us img {
     border-radius: 50%;
-    max-width: 300px;
+    max-width: 350px;
     box-shadow: 0 0 15px #2A2A2A; }
+  #about-us div {
+    align-items: center; }
 
 /************ NEWS ************/
+#news .card-news div {
+  box-shadow: 0 2px 5px #2A2A2A; }
 #news img {
   max-width: 300px;
   margin-top: 15px; }
@@ -104,20 +112,24 @@ section h2 {
   margin-bottom: 60px; }
 #services .service-text, #services .service-title {
   margin-left: 30px;
-  background-color: #75A333;
+  background-color: #8ab933;
   color: #ffffff;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  box-shadow: 0 2px 2px #2A2A2A; }
 #services .service-text {
   text-align: justify;
-  padding-top: 15px; }
+  padding-top: 15px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
 #services .service-title {
   font-weight: bold;
   font-size: 20px;
   text-align: right;
-  padding-top: 30px;
-  padding-right: 30px; }
+  padding-top: 30px; }
 #services .service-icon {
   font-size: 35px;
   padding: 20px 25px;
@@ -136,37 +148,53 @@ section h2 {
   color: #ffffff;
   border-radius: 2px #2A2A2A; }
 #services .active .service-icon {
-  border: 5px solid #75A333;
-  color: #75A333; }
+  border: 5px solid #8ab933;
+  color: #8ab933; }
 
 /************ SERVICES ************/
+#offer .offer-header {
+  margin-bottom: 10px;
+  min-height: 70px; }
+  #offer .offer-header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    font-size: 25px;
+    box-shadow: 0 2px 2px #2A2A2A; }
+    #offer .offer-header div:nth-child(1) {
+      border-right: 1px solid grey; }
+    #offer .offer-header div:nth-child(2) {
+      border-left: 1px solid grey; }
+    #offer .offer-header div small {
+      padding-top: 5px;
+      font-size: 14px; }
 #offer .offer-card {
   border-radius: 2px;
   position: relative;
-  margin-bottom: 30px; }
+  margin-bottom: 10px;
+  min-height: 70px;
+  box-shadow: 0 2px 2px #2A2A2A; }
   #offer .offer-card div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    text-align: center;
     background-color: #ffffff; }
-    #offer .offer-card div div {
-      padding-top: 25px;
-      padding-bottom: 25px; }
+    #offer .offer-card div:nth-child(3) {
+      border-right: 1px solid grey; }
+    #offer .offer-card div:nth-child(4) {
+      border-left: 1px solid grey; }
   #offer .offer-card .offer-price {
     font-size: 18px;
     font-weight: bold; }
-  #offer .offer-card .offer-circle {
-    position: absolute;
-    border: 3px solid #75A333;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    box-shadow: 0 0 10px #2A2A2A;
-    right: 38px;
-    background-color: transparent; }
   #offer .offer-card .offer-icon {
     font-size: 30px;
     text-align: center;
     border-right: 2px solid #2A2A2A; }
+  #offer .offer-card .offer-text {
+    font-size: 18px; }
 
 /************ GALLERY ************/
 #gallery div {
@@ -175,17 +203,20 @@ section h2 {
   margin-top: 15px; }
 #gallery img {
   transition: opacity 1s, transform 1s;
-  box-shadow: 0 0 10px #2A2A2A; }
+  box-shadow: 0 0 10px #2A2A2A;
+  max-height: 500px; }
 
 /************ CONTACT ************/
 #contact #map {
   height: 100%;
   width: 100%;
   min-height: 125px;
-  max-height: 125px;
+  max-height: 250px;
   max-width: 300px;
   margin: auto;
   box-shadow: 0 0 14px #2A2A2A, 0 0 5px #2A2A2A; }
+#contact h2 {
+  margin-bottom: 1.5rem; }
 #contact table tr {
   border-bottom: 1px solid #2A2A2A; }
   #contact table tr:last-child {
@@ -198,5 +229,44 @@ section h2 {
     text-decoration: none; }
 #contact table .icon-cell {
   width: 30px; }
+
+/************ MEDIA QUERIES ************/
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 14px; }
+
+  #contact {
+    font-size: 12px; } }
+@media screen and (max-width: 767px) {
+  .title .hero img {
+    max-width: 100%; }
+
+  #about-us img {
+    max-width: 100%; }
+
+  #news img {
+    max-width: 100%; }
+
+  #services .service-title {
+    font-size: 16px;
+    padding-left: 50px; }
+  #services .service-icon {
+    font-size: 31px;
+    padding: 10px 12.5px;
+    top: -30px;
+    left: 20px;
+    min-width: 80px;
+    min-height: 80px; }
+
+  #offer .offer-header div {
+    font-size: 15px; }
+    #offer .offer-header div small {
+      font-size: 10px; }
+  #offer .offer-card .offer-price {
+    font-size: 14px; }
+  #offer .offer-card .offer-icon {
+    font-size: 20px; }
+  #offer .offer-card .offer-text {
+    font-size: 14px; } }
 
 /*# sourceMappingURL=style.css.map */
