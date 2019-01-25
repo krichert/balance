@@ -3,3 +3,5 @@ Disallow: /css/
 Disallow: /img/
 Disallow: /js/
 Disallow: /pictures/
+
+Sitemap: https://krichert.github.io/balance/sitemap.xml
