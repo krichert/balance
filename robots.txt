@@ -4,4 +4,4 @@ Disallow: /img/
 Disallow: /js/
 Disallow: /pictures/
 
-Sitemap: https://krichert.github.io/balance/sitemap.xml
+Sitemap: http://studiobalancesuwalki.pl/sitemap.xml
