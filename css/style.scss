@@ -348,16 +348,16 @@ section h2, section h1 {
 /************ MEDIA QUERIES ************/
 
 @media screen and (max-width: 992px) {
-	body {
-		font-size: 14px;
-	}
-
 	#contact {
 		font-size: 12px;
 	}
 }
 
 @media screen and (max-width: 767px) {
+	body {
+		font-size: 14px;
+	}
+
 	.title {
 		.hero {
 			img {
@@ -407,7 +407,7 @@ section h2, section h1 {
 
 		.offer-card {
 			.offer-price {
-				font-size: 14px;
+				font-size: 13px;
 			}
 
 			.offer-icon {
@@ -415,7 +415,7 @@ section h2, section h1 {
 			}
 
 			.offer-text {
-				font-size: 14px;
+				font-size: 13px;
 			}
 		}
 	}
