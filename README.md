@@ -7,7 +7,6 @@ Live demo [balance](https://krichert.github.io/balance)
 Wykorzystane technologie
 
 * HTML5
-* CSS3
+* CSS3 (Sass)
 * Boostrap
-* JavaScript
-* jQuery
+* JavaScript (jQuery)
