@@ -50,7 +50,7 @@
 
                 <ul class="w-100">
                     <li class="text-center mx-1">
-                        <a class="nav-link" href="about.html">O mnie</a>
+                        <a class="nav-link active" href="about.html">O mnie</a>
                     </li>
                     <li class="text-center mx-1">
                         <a class="nav-link" href="news.html">Aktualności</a>
@@ -73,71 +73,44 @@
 
     </header>
     <main class="col-12 offset-sm-3 col-sm-9 bg-active">
-        <div id="title" class="title">
-            <div class="container hero">
-                <img src="./img/logo_no_bg.png" alt="logo">
-            </div>
-        </div>
 
-        <div id="description" class="my-5 text-center">
-            Studio Dietetyczno-Treningowe BALANCE to jedyne w Suwałkach połączenie gabinetu dietetycznego i sali
-            treningowej. Tutaj osiągniesz swój cel w kameralnych warunkach, z dala od oczu obserwatorów jak w typowym
-            klubie fitness, indywidualnie pod okiem wykwalifikowanego dietetyka i trenera personalnego. Studio BALANCE
-            to blisko 65m2 dostosowanych do przeprowadzenia efektywnego treningu adekwatnego do Twoich potrzeb
-            i możliwości oraz uzyskania indywidualnych konsultacji żywieniowych. Do dyspozycji klientów dostępna jest
-            szatnia i łazienka z prysznicem.
-        </div>
+        <section id="about-us">
+            <h2>O mnie</h2>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="text-center w-100 mx-5">
+                        <img src="pictures/about.jpg" alt="Andrzej Balunowski">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-3">
+                        <p class="text-center mx-3">
+                            <b>mgr Andrzej Balunowski</b>
+                            <br>dietetyk sportowy i kliniczny, trener personalny</p>
+                        <p class="mx-3">Jestem absolwentem kierunku Dietetyka na Uniwersytecie Warmińsko-Mazurskim w Olsztynie oraz
+                            kierunku Żywienie Człowieka i Ocena Żywności w Szkole Głównej Gospodarstwa Wiejskiego w
+                            Warszawie. Dodatkowo uczestniczyłem w wielu kursach i szkoleniach, takich jak kurs trenera
+                            personalnego czy dietetyki sportowej. Ponadto ukończyłem Podyplomowe Studia Przygotowania
+                            Pedagogicznego w Szkole Głównej Gospodarstwa Wiejskiego
+                            w Warszawie.</p>
+                        <p class="mx-3">Umiejętności praktyczne zdobywałem między innymi w Poradni Gastroenterologicznej
+                            i Endokrynologicznej w Wojewódzkim Specjalistycznym Szpitalu w Olsztynie oraz Poradni
+                            Diabetologicznej w Szpitalu Wojewódzkim w Suwałkach. Miałem również okazję prowadzić
+                            edukację żywieniową wśród dzieci ze szkół podstawowych w ramach kampanii
+                            „Wiem Co Jem” prowadzonej przez urząd miasta Warszawa oraz prelekcje dla kuracjuszy
+                            Uzdrowiska „Odnowa” w Olecku.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div id="contact">
-            <div class="row">
-                <h4 class="text-center col-12">ZRÓB PIERWSZY KROK I SKONTAKTUJ SIĘ JUŻ DZIŚ!</h4>
-            </div>
-            <div class="row info">
-                <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center">
-                    <span class="icon">
-                        <i class="fa fa-phone"></i>
-                    </span>
-                    <div class="info-text">
-                        <a href="tel:503174009">503-174-009</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center">
-                    <span class="icon">
-                        <i class="fa fa-envelope"></i>
-                    </span>
-                    <div class="info-text">
-                        <a href="mailto:studiobalancesuwalki@gmail.com">studiobalancesuwalki@gmail.com</a>
-                    </div>
-                </div>
-                <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                    <span class="icon">
-                        <i class="fa fa-home"></i>
-                    </span>
-                    <div class="info-text d-flex flex-column justify-content-center align-items-center">
-                        <span class="text-center">ul. ks. J. J. Zawadzkiego 2 lok. 1.4.b,</span>
-                        <span class="text-center">(Serce Suwałk, I piętro)</span>
-                    </div>
-                </div>
-            </div>
     </main>
 </div>
-
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/font-awesome.min.js"></script>
 <script src="js/toggle-nav.js"></script>
-<script>
-    function initMap() {
-        var zawadzkiego = {lat: 54.100353, lng: 22.930520};
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 15, center: zawadzkiego});
-        var marker = new google.maps.Marker({position: zawadzkiego, map: map});
-    }
-</script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
-</script>
 
 </body>
 </html>

@@ -1,16 +1,9 @@
 /************ GENERAL ************/
 
-//$active-color: #75A333;
-//$active-color: #6EAB2B;
 $active-color: #8ab933;
 $base-color: #ffffff;
 $accent-color: #2A2A2A;
 $handwriting-font: 'Charm', cursive;
-
-* {
-	margin: 0;
-	padding: 0;
-}
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -20,40 +13,31 @@ body {
 
 /************ NAV ************/
 
-nav {
-	background-color: $base-color;
-	box-shadow: 0 7px 14px rgba(0, 0, 0, 0.20), 0 5px 5px rgba(0, 0, 0, 0.20);
-
-	&.navbar-custom {
-		padding-top: 0;
-		padding-bottom: 0;
-	}
-
-	.navbar-nav .nav-item .nav-link {
-		color: $active-color;
-		border-radius: 3px;
-		transition: font-weight 1s, background-color 1s, color 1s;
-		font-size: 1.2rem;
-
-		&:hover, &:active, &:focus {
-			background-color: $active-color;
-			color: $base-color;
-			font-weight: bold;
-		}
-	}
-
-	.navbar-brand img {
-		width: 45px;
-		height: 45px;
-	}
-
+header {
 	button.navbar-toggler.custom-toggler {
 		color: $active-color;
 		border-color: $active-color;
 		transition: color 1s, background-color 1s, transform 1s;
 		padding: 4px 6.5px;
+		top: 10px;
+		right: 10px;
+		z-index: 3000;
 
-		&:hover {
+		.navbar-toggler-icon {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&.open {
+			.navbar-toggler-icon {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(117,163,51)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+			}
+		}
+
+		&:hover, &:active {
 			color: $base-color;
 			background-color: $active-color;
 			transform: rotate(360deg);
@@ -63,8 +47,73 @@ nav {
 			}
 		}
 
-		.navbar-toggler-icon {
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(117,163,51)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+nav {
+	z-index: 1000;
+	box-shadow: 0 0 14px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.2);
+
+	div {
+		background-color: $base-color;
+		min-height: 100vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		.brand {
+			position: absolute;
+			top: 30px;
+
+			img {
+				max-width: 100px;
+			}
+		}
+
+		ul {
+			width: 100%;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			padding-top: 50px;
+
+			li {
+				a {
+					color: $active-color;
+					border-radius: 3px;
+					transition: font-weight 1s, background-color 1s, color 1s;
+					font-size: 1.2rem;
+
+					&.active {
+						background-color: $active-color;
+						color: $base-color;
+						font-weight: bold;
+					}
+
+					&:hover, &:active, &:focus {
+						background-color: $active-color;
+						color: $base-color;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	nav {
+		display: none;
+		z-index: 2000;
+
+		div {
+			background-color: rgba(255, 255, 255, 0.9);
 		}
 	}
 }
@@ -96,10 +145,6 @@ nav {
 
 /************ BASE ************/
 
-.bg {
-	padding: 60px 0;
-}
-
 .bg-active {
 	background-color: $active-color;
 }
@@ -117,20 +162,10 @@ section h2, section h1 {
 	line-height: 40px;
 }
 
-/************ HOME ************/
-
-#home {
-	text-align: justify;
-
-	p {
-		color: $base-color;
-	}
-
-	.inverse-color {
-		color: $accent-color;
-		text-align: center;
-		margin-top: 30px;
-	}
+section {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	min-height: 100vh;
 }
 
 /************ ABOUT_US ************/
@@ -161,7 +196,7 @@ section h2, section h1 {
 	}
 
 	img {
-		max-width: 300px;
+		max-height: 250px;
 		margin-top: 15px;
 	}
 }
@@ -176,29 +211,30 @@ section h2, section h1 {
 
 	.service-text, .service-title {
 		margin-left: 30px;
-		background-color: $active-color;
-		color: $base-color;
+		background-color: $base-color;
 		padding-left: 15px;
 		padding-right: 15px;
 		padding-bottom: 15px;
-		box-shadow: 0 2px 2px $accent-color;
-
 	}
 
 	.service-text {
 		text-align: justify;
 		padding-top: 15px;
-		min-height: 200px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 	}
 
+	.service-text.info {
+		padding-left: 90px;
+	}
+
 	.service-title {
 		font-weight: bold;
-		font-size: 20px;
+		font-size: 16px;
 		text-align: right;
 		padding-top: 30px;
+		padding-left: 90px;
 	}
 
 	.service-icon {
@@ -217,7 +253,32 @@ section h2, section h1 {
 	}
 }
 
-/************ SERVICES ************/
+@media screen and (max-width: 1180px) {
+	#services {
+		.service-title.long {
+			padding-top: 10px;
+			padding-bottom: 5px;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	#services {
+		.service-title.long {
+			padding-top: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#services {
+		.service-text.info {
+			padding-left: 70px;
+		}
+	}
+}
+
+/************ OFFER ************/
 
 #offer {
 	.offer-header {
@@ -233,18 +294,51 @@ section h2, section h1 {
 			font-size: 25px;
 			box-shadow: 0 2px 2px $accent-color;
 
-			&:nth-child(1) {
-				border-right: 1px solid grey;
-			}
-
-			&:nth-child(2) {
-				border-left: 1px solid grey;
+			&:last-child {
+				border-left: 1px solid black;
 			}
 
 			small {
 				padding-top: 5px;
 				font-size: 14px;
 			}
+		}
+	}
+
+	.offer-row-price {
+		margin-bottom: 10px;
+		min-height: 70px;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: $base-color;
+			font-size: 25px;
+			box-shadow: 0 2px 2px $accent-color;
+
+			&:last-child {
+				border-left: 1px solid black;
+			}
+
+			small {
+				padding-top: 5px;
+				font-size: 14px;
+			}
+		}
+
+		.offer-price {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.offer-text {
+			font-size: 18px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 15px;
 		}
 	}
 
@@ -261,29 +355,19 @@ section h2, section h1 {
 			justify-content: center;
 			align-items: center;
 			background-color: $base-color;
-
-			&:nth-child(3) {
-				border-right: 1px solid grey;
-			}
-
-			&:nth-child(4) {
-				border-left: 1px solid grey;
-			}
-		}
-
-		.offer-price {
-			font-size: 18px;
-			font-weight: bold;
 		}
 
 		.offer-icon {
-			font-size: 30px;
+			font-size: 50px;
 			text-align: center;
-			border-right: 2px solid $accent-color;
 		}
 
 		.offer-text {
 			font-size: 18px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 15px;
 		}
 	}
 }
@@ -308,50 +392,40 @@ section h2, section h1 {
 
 #contact {
 	#map {
-		height: 100%;
 		width: 100%;
-		min-height: 125px;
-		max-height: 250px;
-		max-width: 300px;
+		height: 200px;
+		max-width: 400px;
 		margin: auto;
 		box-shadow: 0 0 14px $accent-color, 0 0 5px $accent-color;
 	}
 
-	h2 {
-		margin-bottom: 1.5rem;
-	}
+	.info {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		font-size: 14px;
 
-	table {
-		tr {
-			border-bottom: 1px solid $accent-color;
-
-			&:last-child {
-				border-bottom: none;
-			}
+		.icon {
+			margin-right: 10px;
+			background-color: $base-color;
+			box-shadow: 0 0 14px $accent-color, 0 0 5px $accent-color;
+			border-radius: 20px;
+			padding: 10px;
+			width: 41px;
+			text-align: center;
 		}
 
-		td {
-			padding: 8px;
-			color: $base-color;
-
-			a {
-				color: $base-color;
-				text-decoration: none;
-			}
+		.info-text {
+			padding: 10px;
 		}
-		.icon-cell {
-			width: 30px;
+
+		a {
+			text-decoration: none;
+			color: $accent-color;
 		}
 	}
 }
 
 /************ MEDIA QUERIES ************/
-
-@media screen and (max-width: 992px) {
-	#contact {
-		font-size: 12px;
-	}
-}
 
 @media screen and (max-width: 767px) {
 	body {
@@ -411,7 +485,17 @@ section h2, section h1 {
 			}
 
 			.offer-icon {
-				font-size: 20px;
+				font-size: 30px;
+			}
+
+			.offer-text {
+				font-size: 13px;
+			}
+		}
+
+		.offer-row-price {
+			.offer-price {
+				font-size: 13px;
 			}
 
 			.offer-text {

@@ -1,46 +1,76 @@
 /************ GENERAL ************/
-* {
-  margin: 0;
-  padding: 0; }
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #2A2A2A; }
 
 /************ NAV ************/
-nav {
-  background-color: #ffffff;
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2); }
-  nav.navbar-custom {
-    padding-top: 0;
-    padding-bottom: 0; }
-  nav .navbar-nav .nav-item .nav-link {
-    color: #8ab933;
-    border-radius: 3px;
-    transition: font-weight 1s, background-color 1s, color 1s;
-    font-size: 1.2rem; }
-    nav .navbar-nav .nav-item .nav-link:hover, nav .navbar-nav .nav-item .nav-link:active, nav .navbar-nav .nav-item .nav-link:focus {
-      background-color: #8ab933;
-      color: #ffffff;
-      font-weight: bold; }
-  nav .navbar-brand img {
-    width: 45px;
-    height: 45px; }
-  nav button.navbar-toggler.custom-toggler {
-    color: #8ab933;
-    border-color: #8ab933;
-    transition: color 1s, background-color 1s, transform 1s;
-    padding: 4px 6.5px; }
-    nav button.navbar-toggler.custom-toggler:hover {
-      color: #ffffff;
-      background-color: #8ab933;
-      transform: rotate(360deg); }
-      nav button.navbar-toggler.custom-toggler:hover .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
-    nav button.navbar-toggler.custom-toggler .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(117,163,51)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+header button.navbar-toggler.custom-toggler {
+  color: #8ab933;
+  border-color: #8ab933;
+  transition: color 1s, background-color 1s, transform 1s;
+  padding: 4px 6.5px;
+  top: 10px;
+  right: 10px;
+  z-index: 3000; }
+  header button.navbar-toggler.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+    header button.navbar-toggler.custom-toggler .navbar-toggler-icon:focus {
+      outline: none; }
+  header button.navbar-toggler.custom-toggler.open .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(117,163,51)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  header button.navbar-toggler.custom-toggler:hover, header button.navbar-toggler.custom-toggler:active {
+    color: #ffffff;
+    background-color: #8ab933;
+    transform: rotate(360deg); }
+    header button.navbar-toggler.custom-toggler:hover .navbar-toggler-icon, header button.navbar-toggler.custom-toggler:active .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  header button.navbar-toggler.custom-toggler:focus {
+    outline: none; }
 
+nav {
+  z-index: 1000;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.2); }
+  nav div {
+    background-color: #ffffff;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    nav div .brand {
+      position: absolute;
+      top: 30px; }
+      nav div .brand img {
+        max-width: 100px; }
+    nav div ul {
+      width: 100%;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      padding-top: 50px; }
+      nav div ul li a {
+        color: #8ab933;
+        border-radius: 3px;
+        transition: font-weight 1s, background-color 1s, color 1s;
+        font-size: 1.2rem; }
+        nav div ul li a.active {
+          background-color: #8ab933;
+          color: #ffffff;
+          font-weight: bold; }
+        nav div ul li a:hover, nav div ul li a:active, nav div ul li a:focus {
+          background-color: #8ab933;
+          color: #ffffff;
+          font-weight: bold; }
+
+@media screen and (max-width: 576px) {
+  nav {
+    display: none;
+    z-index: 2000; }
+    nav div {
+      background-color: rgba(255, 255, 255, 0.9); } }
 /************ TITLE ************/
 .title {
   background-image: url("../img/hero.jpg");
@@ -61,9 +91,6 @@ nav {
       max-width: 300px; }
 
 /************ BASE ************/
-.bg {
-  padding: 60px 0; }
-
 .bg-active {
   background-color: #8ab933; }
 
@@ -78,15 +105,10 @@ section h2, section h1 {
   font-weight: 700;
   line-height: 40px; }
 
-/************ HOME ************/
-#home {
-  text-align: justify; }
-  #home p {
-    color: #ffffff; }
-  #home .inverse-color {
-    color: #2A2A2A;
-    text-align: center;
-    margin-top: 30px; }
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 100vh; }
 
 /************ ABOUT_US ************/
 #about-us {
@@ -104,7 +126,7 @@ section h2, section h1 {
 #news .card-news div {
   box-shadow: 0 2px 5px #2A2A2A; }
 #news img {
-  max-width: 300px;
+  max-height: 250px;
   margin-top: 15px; }
 
 /************ SERVICES ************/
@@ -113,24 +135,24 @@ section h2, section h1 {
   margin-bottom: 60px; }
 #services .service-text, #services .service-title {
   margin-left: 30px;
-  background-color: #8ab933;
-  color: #ffffff;
+  background-color: #ffffff;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 15px;
-  box-shadow: 0 2px 2px #2A2A2A; }
+  padding-bottom: 15px; }
 #services .service-text {
   text-align: justify;
   padding-top: 15px;
-  min-height: 200px;
   display: flex;
   flex-direction: row;
   align-items: center; }
+#services .service-text.info {
+  padding-left: 90px; }
 #services .service-title {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   text-align: right;
-  padding-top: 30px; }
+  padding-top: 30px;
+  padding-left: 90px; }
 #services .service-icon {
   font-size: 35px;
   padding: 20px 25px;
@@ -145,7 +167,17 @@ section h2, section h1 {
   min-height: 105px;
   text-align: center; }
 
-/************ SERVICES ************/
+@media screen and (max-width: 1180px) {
+  #services .service-title.long {
+    padding-top: 10px;
+    padding-bottom: 5px; } }
+@media screen and (max-width: 992px) {
+  #services .service-title.long {
+    padding-top: 30px; } }
+@media screen and (max-width: 768px) {
+  #services .service-text.info {
+    padding-left: 70px; } }
+/************ OFFER ************/
 #offer .offer-header {
   margin-bottom: 10px;
   min-height: 70px; }
@@ -157,13 +189,36 @@ section h2, section h1 {
     background-color: #ffffff;
     font-size: 25px;
     box-shadow: 0 2px 2px #2A2A2A; }
-    #offer .offer-header div:nth-child(1) {
-      border-right: 1px solid grey; }
-    #offer .offer-header div:nth-child(2) {
-      border-left: 1px solid grey; }
+    #offer .offer-header div:last-child {
+      border-left: 1px solid black; }
     #offer .offer-header div small {
       padding-top: 5px;
       font-size: 14px; }
+#offer .offer-row-price {
+  margin-bottom: 10px;
+  min-height: 70px; }
+  #offer .offer-row-price div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    font-size: 25px;
+    box-shadow: 0 2px 2px #2A2A2A; }
+    #offer .offer-row-price div:last-child {
+      border-left: 1px solid black; }
+    #offer .offer-row-price div small {
+      padding-top: 5px;
+      font-size: 14px; }
+  #offer .offer-row-price .offer-price {
+    font-size: 18px;
+    font-weight: bold; }
+  #offer .offer-row-price .offer-text {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px; }
 #offer .offer-card {
   border-radius: 2px;
   position: relative;
@@ -176,19 +231,15 @@ section h2, section h1 {
     justify-content: center;
     align-items: center;
     background-color: #ffffff; }
-    #offer .offer-card div:nth-child(3) {
-      border-right: 1px solid grey; }
-    #offer .offer-card div:nth-child(4) {
-      border-left: 1px solid grey; }
-  #offer .offer-card .offer-price {
-    font-size: 18px;
-    font-weight: bold; }
   #offer .offer-card .offer-icon {
-    font-size: 30px;
-    text-align: center;
-    border-right: 2px solid #2A2A2A; }
+    font-size: 50px;
+    text-align: center; }
   #offer .offer-card .offer-text {
-    font-size: 18px; }
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px; }
 
 /************ GALLERY ************/
 #gallery div {
@@ -202,32 +253,30 @@ section h2, section h1 {
 
 /************ CONTACT ************/
 #contact #map {
-  height: 100%;
   width: 100%;
-  min-height: 125px;
-  max-height: 250px;
-  max-width: 300px;
+  height: 200px;
+  max-width: 400px;
   margin: auto;
   box-shadow: 0 0 14px #2A2A2A, 0 0 5px #2A2A2A; }
-#contact h2 {
-  margin-bottom: 1.5rem; }
-#contact table tr {
-  border-bottom: 1px solid #2A2A2A; }
-  #contact table tr:last-child {
-    border-bottom: none; }
-#contact table td {
-  padding: 8px;
-  color: #ffffff; }
-  #contact table td a {
-    color: #ffffff;
-    text-decoration: none; }
-#contact table .icon-cell {
-  width: 30px; }
+#contact .info {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 14px; }
+  #contact .info .icon {
+    margin-right: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 14px #2A2A2A, 0 0 5px #2A2A2A;
+    border-radius: 20px;
+    padding: 10px;
+    width: 41px;
+    text-align: center; }
+  #contact .info .info-text {
+    padding: 10px; }
+  #contact .info a {
+    text-decoration: none;
+    color: #2A2A2A; }
 
 /************ MEDIA QUERIES ************/
-@media screen and (max-width: 992px) {
-  #contact {
-    font-size: 12px; } }
 @media screen and (max-width: 767px) {
   body {
     font-size: 14px; }
@@ -259,8 +308,12 @@ section h2, section h1 {
   #offer .offer-card .offer-price {
     font-size: 13px; }
   #offer .offer-card .offer-icon {
-    font-size: 20px; }
+    font-size: 30px; }
   #offer .offer-card .offer-text {
+    font-size: 13px; }
+  #offer .offer-row-price .offer-price {
+    font-size: 13px; }
+  #offer .offer-row-price .offer-text {
     font-size: 13px; }
 
   section h1, section h2 {
