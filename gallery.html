@@ -68,6 +68,10 @@
                         <a class="nav-link" href="contact.html">Kontakt</a>
                     </li>
                 </ul>
+
+                <a class="admin-link" href="admin.html">
+                    ADMIN PANEL
+                </a>
             </div>
         </nav>
 
@@ -78,20 +82,12 @@
             <h2>Galeria</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col">
-                        <img class="img-fluid" src="pictures/gym2.jpg" alt="siłownia">
+                    <div id="gallery-main" class="col">
+
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="pictures/gym.jpg" alt="siłownia">
-                    </div>
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="pictures/gym3.jpg" alt="siłownia">
-                    </div>
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="pictures/office.jpg" alt="biuro">
-                    </div>
+                <div id="gallery-row" class="row">
+
                 </div>
             </div>
         </section>
@@ -102,8 +98,11 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/font-awesome.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase.js"></script>
+<script src="js/firebase-config.js"></script>
 <script src="js/toggle-nav.js"></script>
 <script src="js/zoom-img.js"></script>
+<script src="js/gallery.js"></script>
 
 </body>
 </html>

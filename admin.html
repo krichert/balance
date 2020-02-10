@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="copyright" content="This page was made by Kamil Richert">
+    <meta content="Kamil Richert" name="author">
+    <meta name="description"
+          content="Muzykon to artystyczna przestrzeń muzyczna: nauka gry na instrumentach, zajęcia wokalne, warsztaty, sale prób, studio nagrań, koncerty i inne wydarzenia muzyczne.">
+    <meta name="keywords"
+          content="Muzykon, Muzykon Gdańsk, Pracownia Muzyczna Muzykon, Pracownia Muzyczna Gdańsk, Szkoła muzyczna, ognisko muzyczne,
+           centrum muzyczne, zajęcia muzyczne, nauka gry, lekcje muzyki, pianino, saksofon, klarnet, gitara, wokal, śpiew,
+           wiolonczela, skrzypce, flet, ukulele, perkusja, zajęcia wokalne, zespół muzyczny, zajęcia zespołowe, warsztaty muzyczne,
+           warsztaty ukulele, warsztaty wokalne, warsztaty instrumentalne, sale prób, ćwiczeniówki, sale na wynajem, studio nagrań,
+           nagrywanie, koncert, klub muzyczny, muzyka,nauka gry na pianinie, nauka gry na gitarze, nauka gry na ukulele,
+           nauka gry na klarnecie, nauka gry na saksofonie, nauka gry na skrzypcach, nauka gry na wiolonczeli,
+           nauka gry na flecie, nauka gry na perkusji, nauka śpiewu, Sale prób gdańsk, sala z pianinem gdańsk, ">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="7 days" name="revisit-after">
+    <meta content="code" name="googlebot">
+    <meta content="Muzykon" name="DC.title">
+    <meta content="http://muzykon.pl/" name="DC.creator">
+    <meta content="Muzykon"
+          name="DC.subject" lang="pl">
+    <meta content="Muzykon to artystyczna przestrzeń muzyczna: nauka gry na instrumentach, zajęcia wokalne, warsztaty, sale prób, studio nagrań, koncerty i inne wydarzenia muzyczne."
+          name="DC.description" lang="pl">
+    <meta content="Muzykon" name="DC.publisher">
+    <meta content="Muzykon" property="og:title">
+    <meta content="Muzykon to artystyczna przestrzeń muzyczna: nauka gry na instrumentach, zajęcia wokalne, warsztaty, sale prób, studio nagrań, koncerty i inne wydarzenia muzyczne."
+          property="og:description">
+    <meta content="http://muzykon.pl/" property="og:url">
+    <meta content="//http://muzykon.pl/favicon.ico" property="og:image">
+    <meta content="index,follow" name="robots">
+    <title>Admin Muzykon</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 offset-4 col-md-2 offset-md-5">
+                <img class="img-fluid" src="./img/logo_no_bg.png" alt="logo"/>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="text-center">ADMIN PANEL</h4>
+
+</header>
+
+<main>
+    <section style="display: none;" id="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form class="form-signin my-5 d-flex align-items-center flex-column">
+                        <label for="inputEmail" class="sr-only">Email</label>
+                        <input type="email" id="inputEmail" class="form-control my-1" placeholder="Email" required=""
+                               autofocus="">
+                        <label for="inputPassword" class="sr-only">Hasło</label>
+                        <input type="password" id="inputPassword" class="form-control my-1" placeholder="Hasło"
+                               required="">
+                        <button id="submitLogin" class="btn app-btn-accent btn-block my-3" type="submit">Zaloguj się
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section style="display: none;" id="panel">
+        <div class="container my-5">
+            <div class="row bg-active">
+                <div class="col">
+                    <h2 class="my-3">AKTUALNOŚCI</h2>
+                    <div class="news-table table-responsive">
+                        <table class="table table-light w-100">
+                            <thead>
+                            <tr>
+                                <th scope="col">Data</th>
+                                <th scope="col">Tytul</th>
+                                <th scope="col">Tekst</th>
+                                <th scope="col">Miniaturka</th>
+                                <th scope="col" width="100px" class="text-center">Usuń</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-8 offset-2">
+                        <hr>
+                    </div>
+                    <div class="news-form col-md-6 offset-md-3 mb-3">
+                        <form>
+                            <h5 class="my-3 text-center">Dodaj nowy wpis</h5>
+                            <div class="form-group row">
+                                <label for="newsDate" class="col-2 col-form-label">Data</label>
+                                <div class="col-10">
+                                    <input type="text" class="form-control" id="newsDate"
+                                           placeholder="10.02.2020" required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="newsTitle" class="col-2 col-form-label">Tytuł</label>
+                                <div class="col-10">
+                                    <input type="text" class="form-control" id="newsTitle" placeholder="..."
+                                           required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="newsDescription" class="col-2 col-form-label">Opis</label>
+                                <div class="col-10">
+                                    <input type="text" class="form-control" id="newsDescription" placeholder="..."
+                                           required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <input type="file" class="form-control" id="newsPhoto" required="">
+                            </div>
+                            <div class="text-center">
+                                <button id="newsSubmit" class="btn btn-primary" type="submit">Dodaj</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row bg-active mt-5">
+                <div class="col">
+                    <h2 class="my-3">GALERIA</h2>
+                    <div class="gallery-table table-responsive">
+                        <table class="table table-light w-100">
+                            <thead>
+                            <tr>
+                                <th scope="col">Nazwa zdjęcia</th>
+                                <th scope="col">Miniatura</th>
+                                <th scope="col" width="100px" class="text-center">Usuń</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-8 offset-2">
+                        <hr>
+                    </div>
+                    <div class="news-form col-md-6 offset-md-3 mb-3">
+                        <form>
+                            <h5 class="my-3 text-center">Dodaj nowe zdjęcie</h5>
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input type="file" class="form-control" id="photo" required="">
+                                </div>
+                                <div class="col-12 text-center mt-1">
+                                    <button id="photoSubmit" class="btn btn-primary" type="submit">Dodaj</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-secondary">Wyloguj się</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row d-flex justify-content-center mb-3">
+                <a href="index.html" class="btn btn-link btn-sm">POWRÓT DO STRONY GŁÓWNEJ</a>
+            </div>
+    </footer>
+</main>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

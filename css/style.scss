@@ -104,6 +104,19 @@ nav {
 				}
 			}
 		}
+
+		.admin-link {
+			position: absolute;
+			text-decoration: none;
+			color: $active-color;
+			bottom: 10px;
+			font-size: 10px;
+			letter-spacing: 3px;
+
+			&:hover {
+				color: $accent-color;
+			}
+		}
 	}
 }
 

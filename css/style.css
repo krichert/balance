@@ -64,6 +64,15 @@ nav {
           background-color: #8ab933;
           color: #ffffff;
           font-weight: bold; }
+    nav div .admin-link {
+      position: absolute;
+      text-decoration: none;
+      color: #8ab933;
+      bottom: 10px;
+      font-size: 10px;
+      letter-spacing: 3px; }
+      nav div .admin-link:hover {
+        color: #2A2A2A; }
 
 @media screen and (max-width: 576px) {
   nav {
