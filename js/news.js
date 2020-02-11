@@ -57,7 +57,7 @@ $(document).ready(function () {
                 var empty = document.createElement('p');
                 empty.innerText = "Brak aktualności. Sprawdź ponownie później.";
 
-                newsContainer.append()
+                newsContainer.append(empty)
             }
     });
 });
