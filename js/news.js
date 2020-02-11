@@ -51,6 +51,13 @@ $(document).ready(function () {
                 container.appendChild(textContainer);
 
                 newsContainer.append(container);
-            });
+            })
+
+            if (arrayNews.length === 0) {
+                var empty = document.createElement('p');
+                empty.innerText = "Brak aktualności. Sprawdź ponownie później.";
+
+                newsContainer.append()
+            }
     });
 });
